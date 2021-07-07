@@ -1,7 +1,7 @@
 class Thermostat {
-  constructor() {
+  constructor(defaultTemp = 20) {
+    this.DEFAULT_TEMP = defaultTemp;
     this.powerSaver = true;
-    this.DEFAULT_TEMP = 20;
     this.temperature = this.DEFAULT_TEMP;
     this.MINIMUM_TEMPERATURE = 10;
     this.MAXIMUM_TEMP_PS_ON = 25;
