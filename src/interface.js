@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const updateTemp = () => {
     document.querySelector('#set-temp').innerText = thermostat.temperature;
-    document.querySelector('#set-temp').className = thermostat.energyUsage();
+    document.querySelector('#energy-usage').className = thermostat.energyUsage();
   }
 
   const thermostat = new Thermostat();
@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTemp();
   });
 
-  document.querySelector('#power-saving-status').addEventListener('click', () => {
+  document.querySelector('#power-saver').addEventListener('click', () => {
     thermostat.turnPowerSaverOn();
-    document.querySelector('#power-saving-status').innerHTML = 'ON';
+    document.querySelector('#power-saving-status').className = 'badge rounded-pill bg-success';
     updateTemp();
   });
 
-  document.querySelector('#power-saving-status').addEventListener('click', () => {
+  document.querySelector('#power-saver').addEventListener('click', () => {
     thermostat.turnPowerSaverOff();
-    document.querySelector('#power-saving-status').innerHTML = 'OFF';
+    document.querySelector('#power-saving-status').className = 'badge rounded-pill bg-secondary';
     updateTemp();
   });
 

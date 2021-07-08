@@ -28,14 +28,14 @@
       <!-- TEMP DISPLAY -->
       <section id="display" class="row p-4">
         <div class="col-3 my-auto">
-          <p class="h6">Temp</p>
+          <p id="power-saving-status" class="h6 badge rounded-pill bg-success">Temp <i class="fas fa-leaf"></i></p>
           <p class="display-4" id="current-temp">20<span>&#176;<sup>c</sup></span></p>
         </div>
         <div class="col-3 my-auto border-end">
           <i class="fas fa-home"></i>
         </div>
         <div class="col-4 my-auto text-end">
-          <p class="h6">Set</p>
+          <p class="h6" id="energy-usage">Set <i class="fas fa-fire"></i></p>
           <p class="display-4"><span id="set-temp">24</span><span>&#176;<sup>c</sup></span></p>
         </div>
         <div class="col-2 my-auto text-end">
@@ -49,38 +49,13 @@
       <!-- TEMP CONTROLS -->
       <section id="controls" class="row px-4 pb-4">
         <div class="col-6">
-          <button type="button" class="btn btn-sm btn-outline-dark"><i class="fas fa-power-off"></i> <span id="power-saving-status">ON</span></button> <span>Power saver mode</span>
+          <button type="button" id="power-saver" class="btn btn-sm btn-outline-dark"><i class="fas fa-power-off"></i> PSM</button>
         </div>
         <div class="col-6 text-end">
           <button id="temp-reset" type="button" class="btn btn-sm btn-outline-dark"><i class="fas fa-redo"></i> reset</button>
         </div>
       </section>
     </main>
-    <!-- <section>
-      <div class="container mt-3">    
-            <div class="card text-center">
-              <h2 class="display-4 card-header">
-                Thermostat
-              </h2>
-              <div class="card-body">
-                <h2 id="current-temp" class="display-2 card-title mb-3">20</h2>
-                <div class="btn-group" role="group" aria-label="Temperature controls">
-                  <button id='temp-up' type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i></button>
-                  <button id='temp-down' type="button" class="btn btn-outline-primary"><i class="fas fa-minus"></i></button>
-                  <button id='temp-reset' type="button" class="btn btn-outline-primary"><i class="fas fa-redo"></i></button>
-                </div>
-                <p class="card-text mt-5">Power Saving Mode is <span id='power-saving-status'>on</span></p>
-                <div class="btn-group" role="group" aria-label="Power Saving mode controls">
-                  <input type="radio" class="btn-check" name="btnradio" id="power-saver-on" autocomplete="off" checked>
-                  <label class="btn btn-outline-primary" for="power-saver-on">On</label>
-                
-                  <input type="radio" class="btn-check" name="btnradio" id="power-saver-off" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="power-saver-off">Off</label>
-                </div>
-              </div>
-        </div>
-      </div>
-    </section> -->
     <script src="src/thermostat.js"></script>
     <script src="src/interface.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

@@ -57,10 +57,10 @@ class Thermostat {
 
   energyUsage() {
     if(this.temperature < this.MEDIUM_ENERGY_USAGE) {
-      return 'low-usage';
+      return 'badge rounded-pill bg-success';
     } else if (this.temperature < this.HIGH_ENERGY_USAGE) {
-      return 'medium-usage';
+      return 'badge rounded-pill bg-warning text-dark';
     } 
-      return 'high-usage';
+      return 'badge rounded-pill bg-danger';
   }
 }
