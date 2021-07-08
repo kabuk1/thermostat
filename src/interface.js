@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const updateTemp = () => {
-    document.querySelector('#current-temp').innerText = thermostat.temperature;
-    document.querySelector('#current-temp').className = thermostat.energyUsage();
+    document.querySelector('#set-temp').innerText = thermostat.temperature;
+    document.querySelector('#set-temp').className = thermostat.energyUsage();
   }
 
   const thermostat = new Thermostat();
@@ -22,15 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTemp();
   });
 
-  document.querySelector('#power-saver-on').addEventListener('click', () => {
+  document.querySelector('#power-saving-status').addEventListener('click', () => {
     thermostat.turnPowerSaverOn();
-    document.querySelector('#power-saving-status').innerText = 'on';
+    document.querySelector('#power-saving-status').innerHTML = 'ON';
     updateTemp();
   });
 
-  document.querySelector('#power-saver-off').addEventListener('click', () => {
+  document.querySelector('#power-saving-status').addEventListener('click', () => {
     thermostat.turnPowerSaverOff();
-    document.querySelector('#power-saving-status').innerText = 'off';
+    document.querySelector('#power-saving-status').innerHTML = 'OFF';
     updateTemp();
   });
+
+  // Time and date
+  const time = new Date();
+  document.querySelector("#current-time").innerHTML = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+
+  const date = new Date();
+  document.querySelector("#current-date").innerHTML = date.toDateString();
+  
 });

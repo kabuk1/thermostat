@@ -9,3 +9,16 @@
 .high-usage {
   color: red;
 }
+
+.fa-home {
+  font-size: 3em;
+}
+
+@media screen and (min-width: 550px) {
+  #thermostat {
+    width: 100%;
+    max-width: 50%;
+    padding: 15px;
+    margin: auto;
+  }
+}
